@@ -33,7 +33,7 @@ export class UserService {
   {
    // localStorage.removeItem('username');
     this.username='';
-    this.router.navigate(['/login']);
+    this.router.navigate(['/']);
   }
   
 

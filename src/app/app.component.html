@@ -1,9 +1,10 @@
 <div class="jumbotron bg-dark">
     <div class="row">
-      <div class="col-12">
-        <div class="card bg-dark">
-          <div class="card-body">
-            <h1 class="card-title text-center text-white py-3">{{ title }}</h1>
+      <div class="col-2">
+        <img src="../assets/images/travelservice.png" alt="Travel Service" >
+      </div>
+      <div class="col-8">
+            <h1 class="text-center text-white py-3">{{ title }}</h1>
             <ul class="text-center list-inline py-3">
               <li class="list-inline-item">
                 <a routerLink="/login" class="btn btn-info btn-lg"><strong>Login</strong></a>
@@ -12,11 +13,11 @@
                 <a routerLink="/signup" class="btn btn-info btn-lg"><strong>Signup</strong></a>
                 </li>
             </ul>
-          </div>
         </div>
+        
       </div>
     </div>
-  </div>
+  
   <router-outlet></router-outlet>
   <app-footer></app-footer>
   

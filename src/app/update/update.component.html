@@ -5,34 +5,40 @@
       <li class="list-inline-item">
       <a routerLink="/home" class="btn btn-info">Home</a>
       </li>
-    </div>
-  
+ </div>
+  <div class="row">
+    <div class="col-3"></div>
+
+  <div class="col-6">
   
   <div class="card my-5"[hidden]="submission">
+    <div class="card-header">
+      <h2><strong>Update Travel</strong></h2>
+    </div>
       <div class="card-body">
         <form (ngSubmit)="onSubmit(updateForm)" #updateForm="ngForm">
           <div class="form-group">
-            <label for="name">Name</label>
+            <label for="name"><h4><strong>Name</strong></h4></label>
             <input type="text" [(ngModel)]="travel.name" 
               class="form-control" 
               id="name" 
               name="name" 
-              placeholder="Enter your name"
+              placeholder="Enter your name <optional>"
                #name="ngModel">
           </div>
           
           <div class="form-group">
-              <label for="src">Source</label>
+              <label for="src"><h4><strong>Source</strong></h4></label>
               <input type="text" [(ngModel)]="travel.src" 
                 class="form-control" 
                 id="src" 
                 name="src" 
-                placeholder="Source Country"
+                placeholder="Source Country <Optional>"
                  #src="ngModel">
           </div>
             
           <div class="form-group">
-              <label for="des">Destination</label>
+              <label for="des"><h4><strong>Destination*</strong></h4></label>
               <input type="text" [(ngModel)]="travel.des" 
                 class="form-control" 
                 id="des" 
@@ -42,17 +48,17 @@
           </div>
           <div [hidden]="des.dirty||!des.touched" class="alert alert-danger">Destination is required</div>
           <div class="form-group">
-              <label for="st">Start Date</label>
+              <label for="st"><h4><strong>Start Date</strong></h4></label>
               <input type="text" [(ngModel)]="travel.st" 
                 class="form-control" 
                 id="st" 
                 name="st" 
-                placeholder="Journey Start Date"
+                placeholder="Journey Start Date <optional>"
                  #st="ngModel">
           </div>
             
           <div class="form-group">
-              <label for="en">End Date</label>
+              <label for="en"><h4><strong>End Date*</strong></h4></label>
               <input type="text" [(ngModel)]="travel.en" 
                 class="form-control" 
                 id="en" 
@@ -63,11 +69,13 @@
           <div [hidden]="en.dirty||!en.touched" class="alert alert-danger">EndDate is required</div>  
           <li class="list-inline-item">
           <button type="submit" [disabled]="!updateForm.form.valid" 
-            class="btn btn-info">Submit</button>
+            class="btn btn-success">Submit</button>
           </li>
             <li class="list-inline-item">
-              <a routerLink="/home" class="btn btn-info">Cancel</a>
+              <a routerLink="/home" class="btn btn-danger">Cancel</a>
             </li>
         </form>
       </div>
     </div>
+  </div>
+  </div>

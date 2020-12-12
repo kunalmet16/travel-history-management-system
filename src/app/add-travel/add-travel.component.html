@@ -9,12 +9,16 @@
     </li>
 </div>
 <div class="row">
-  <div class="col-2"></div>
-<div class="card my-5 col-8"[hidden]="submission">
+  <div class="col-3"></div>
+  <div class="col-6">
+<div class="card my-5"[hidden]="submission">
+  <div class="card-header">
+    <h2><strong>Travel Form</strong></h2>
+  </div>
     <div class="card-body">
       <form (ngSubmit)="onSubmit(travelForm)" #travelForm="ngForm">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name"><h4><strong>Name*</strong></h4></label>
           <input type="text" [(ngModel)]="travel.name" 
             class="form-control" 
             id="name" 
@@ -24,7 +28,7 @@
         </div>
         <div [hidden]="name.dirty||!name.touched" class="alert alert-danger">Name is required</div>
         <div class="form-group">
-            <label for="src">Source</label>
+            <label for="src"><h4><strong>source*</strong></h4></label>
             <input type="text" [(ngModel)]="travel.src" 
               class="form-control" 
               id="src" 
@@ -34,7 +38,7 @@
         </div>
           <div [hidden]="src.dirty||!src.touched" class="alert alert-danger">Source is required</div>
         <div class="form-group">
-            <label for="des">Destination</label>
+            <label for="des"><h4><strong>Destination</strong></h4></label>
             <input type="text" [(ngModel)]="travel.des" 
               class="form-control" 
               id="des" 
@@ -43,7 +47,7 @@
                #des="ngModel">
         </div>
         <div class="form-group">
-            <label for="st">Start Date</label>
+            <label for="st"><h4><strong>Start Date*</strong></h4></label>
             <input type="date" [(ngModel)]="travel.st" 
               class="form-control" 
               id="st" 
@@ -53,7 +57,7 @@
         </div>
           <div [hidden]="st.dirty||!st.touched" class="alert alert-danger">startDate is required</div>
         <div class="form-group">
-            <label for="en">End Date</label>
+            <label for="en"><h4><strong>End Date</strong></h4></label>
             <input type="date" [(ngModel)]="travel.en" 
               class="form-control" 
               id="en" 
@@ -64,12 +68,13 @@
 
         <li class="list-inline-item">
         <button type="submit" [disabled]="!travelForm.form.valid" 
-          class="btn btn-info">Submit</button>
+          class="btn btn-success">Submit</button>
         </li>
           <li class="list-inline-item">
-            <a routerLink="/home" class="btn btn-info">Cancel</a>
+            <a routerLink="/home" class="btn btn-danger">Cancel</a>
           </li>
       </form>
     </div>
   </div>
+</div>
 </div>
