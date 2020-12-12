@@ -6,6 +6,7 @@ import { AddTravelComponent } from './add-travel/add-travel.component';
 import { ViewTravelComponent } from './view-travel/view-travel.component';
 import { UpdateComponent } from './update/update.component';
 import { SignupComponent } from './signup/signup.component';
+import { CountryComponent } from './country/country.component';
 
 
 
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'addTravel',component:AddTravelComponent},
   {path:'viewTravel',component:ViewTravelComponent},
   {path:'update/:id',component:UpdateComponent},
+  {path:'country/:cname',component:CountryComponent}
   
 
   

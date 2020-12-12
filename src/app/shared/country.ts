@@ -1,5 +1,6 @@
 export class Country{
-    name:String='';
-    startdate:String='';
-    enddate:String='';
+    
+    startdate!: Date;
+    enddate!: Date;
+    diffInDays!: Number;
 }

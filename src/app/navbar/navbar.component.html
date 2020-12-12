@@ -5,9 +5,16 @@
         </li>
         
     </ul>
-    <li class="list-inline-item">
-        <strong>Welcome {{_userService.username}}</strong>
-    </li>
+    <form class="form-inline"(ngSubmit)="onSubmit()" #countryForm="ngForm">
+          <input type="text" [(ngModel)]="country.name" 
+            class="form-control mr-sm-4" 
+            id="name" 
+            name="name" 
+            placeholder="Search By Destination"
+            #name="ngModel">
+            
+        <button type="submit" class="btn btn-success ">Search</button>
+      </form>
     <li class="list-inline-item">
         <button (click)="_userService.logout()"class="btn btn-danger btn-lg">Logout</button>
     </li>

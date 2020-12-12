@@ -34,7 +34,7 @@ export class TravelService {
   }
   public getCountry(countryname:String)
   {
-    return this.http.get<Country[]>(`http://localhost:8080/users/${localStorage.getItem('username')}/country/${countryname}`);
+    return this.http.get<Country[]>(`http://localhost:8080/users/${this._userServcie.username}/country/${countryname}`);
   }
   
 }
