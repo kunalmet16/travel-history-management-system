@@ -1,0 +1,73 @@
+<div [hidden]="!submission">
+    <h1>Journey updated Succesfully!!</h1>
+</div>
+<div>
+      <li class="list-inline-item">
+      <a routerLink="/home" class="btn btn-info">Home</a>
+      </li>
+    </div>
+  
+  
+  <div class="card my-5"[hidden]="submission">
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit(updateForm)" #updateForm="ngForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" [(ngModel)]="travel.name" 
+              class="form-control" 
+              id="name" 
+              name="name" 
+              placeholder="Enter your name"
+               #name="ngModel">
+          </div>
+          
+          <div class="form-group">
+              <label for="src">Source</label>
+              <input type="text" [(ngModel)]="travel.src" 
+                class="form-control" 
+                id="src" 
+                name="src" 
+                placeholder="Source Country"
+                 #src="ngModel">
+          </div>
+            
+          <div class="form-group">
+              <label for="des">Destination</label>
+              <input type="text" [(ngModel)]="travel.des" 
+                class="form-control" 
+                id="des" 
+                name="des" 
+                placeholder="Destination Country"
+                required #des="ngModel">
+          </div>
+          <div [hidden]="des.dirty||!des.touched" class="alert alert-danger">Destination is required</div>
+          <div class="form-group">
+              <label for="st">Start Date</label>
+              <input type="text" [(ngModel)]="travel.st" 
+                class="form-control" 
+                id="st" 
+                name="st" 
+                placeholder="Journey Start Date"
+                 #st="ngModel">
+          </div>
+            
+          <div class="form-group">
+              <label for="en">End Date</label>
+              <input type="text" [(ngModel)]="travel.en" 
+                class="form-control" 
+                id="en" 
+                name="en" 
+                placeholder="End Date"
+                required #en="ngModel">
+          </div>
+          <div [hidden]="en.dirty||!en.touched" class="alert alert-danger">EndDate is required</div>  
+          <li class="list-inline-item">
+          <button type="submit" [disabled]="!updateForm.form.valid" 
+            class="btn btn-info">Submit</button>
+          </li>
+            <li class="list-inline-item">
+              <a routerLink="/home" class="btn btn-info">Cancel</a>
+            </li>
+        </form>
+      </div>
+    </div>

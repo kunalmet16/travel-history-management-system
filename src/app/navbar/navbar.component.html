@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand navbar-light bg-secondary ">
+    <ul class="nav navbar-nav" >
+        <li class="nav-item"*ngFor="let link of links">
+           <a class="nav-link" [routerLink]="link.path"><h3><strong>{{link.title}}</strong></h3></a>
+        </li>
+        
+    </ul>
+    <li class="list-inline-item">
+        <strong>Welcome {{_userService.username}}</strong>
+    </li>
+    <li class="list-inline-item">
+        <button (click)="_userService.logout()"class="btn btn-danger btn-lg">Logout</button>
+    </li>
+</nav>

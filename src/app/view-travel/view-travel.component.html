@@ -1,0 +1,39 @@
+
+<div class="container">
+  <div class="text-right">
+  <li class="list-inline-item">
+    <a routerLink="/home" class="btn btn-secondary btn-lg">Back</a>
+    </li> 
+  </div>
+  <div class="text-center bg-dark text-white ">
+    <h2>{{travel[0].name}}'s Travel History</h2>
+  </div>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>TravelId</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let t of travel">
+      <tr >
+        <td><h3>{{t.id}}</h3></td>
+        <td><h3>{{t.src}}</h3></td>
+        <td><h3>{{t.des}}</h3></td>
+        <td><h3>{{t.st}}</h3></td>
+        <td><h3>{{t.en}}</h3></td>
+        <td><a [routerLink]="['/update',t.id]" class="btn btn-info btn-lg ">Update</a></td>
+      </tr>
+      
+    </tbody>
+  </table>
+  
+</div>
+
+
