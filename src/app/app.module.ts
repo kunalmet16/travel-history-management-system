@@ -13,6 +13,8 @@ import { ViewTravelComponent } from './view-travel/view-travel.component';
 import { UpdateComponent } from './update/update.component';
 import { SignupComponent } from './signup/signup.component';
 import { CountryComponent } from './country/country.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeadComponent } from './head/head.component';
 
 
 
@@ -29,6 +31,8 @@ import { CountryComponent } from './country/country.component';
     UpdateComponent,
     SignupComponent,
     CountryComponent,
+    FooterComponent,
+    HeadComponent,
     
    
     

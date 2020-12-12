@@ -7,13 +7,14 @@ import { ViewTravelComponent } from './view-travel/view-travel.component';
 import { UpdateComponent } from './update/update.component';
 import { SignupComponent } from './signup/signup.component';
 import { CountryComponent } from './country/country.component';
+import { HeadComponent } from './head/head.component';
 
 
 
 
 
 const routes: Routes = [
-  
+  {path:'',component:HeadComponent},
   { path: 'login', component: LoginComponent },
   {path:'signup',component:SignupComponent},
   {path:'home', component:HomeComponent},
