@@ -26,8 +26,10 @@
         <td><h3>{{t.id}}</h3></td>
         <td><h3>{{t.src}}</h3></td>
         <td><h3>{{t.des}}</h3></td>
-        <td><h3>{{t.st.valueOf()|date}}</h3></td>
-        <td><h3>{{t.en.valueOf()|date}}</h3></td>
+        <td><h3 *ngIf="t.st!=null">{{t.st.valueOf()|date}}</h3></td>
+        <td><h3 *ngIf="t.en!=null">{{t.en.valueOf()|date}}</h3></td>
+        <td><h3 *ngIf="t.st==null"></h3></td>
+        <td><h3 *ngIf="t.en==null"></h3></td>
         <td><a [routerLink]="['/update',t.id]" class="btn btn-info btn-lg ">Update</a></td>
       </tr>
       

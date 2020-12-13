@@ -1,9 +1,9 @@
 export class Travel{
-    id:Number=0;
-    name:String='';
-    src:String='';
-    des:String='';
-    st:String='';
-    en:String='';
+    id!: Number;
+    name:String|null='';
+    src:String|null='';
+    des:String|null='';
+    st:String|null='';
+    en:String|null='';
 
 }

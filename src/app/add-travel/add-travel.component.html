@@ -1,4 +1,4 @@
-<div [hidden]="!submission">
+<div [hidden]="!submission" class="text-center">
   <h1>Journey Added Succesfully!!</h1>
   
   <li class="list-inline-item">
@@ -29,22 +29,116 @@
         <div [hidden]="name.dirty||!name.touched" class="alert alert-danger">Name is required</div>
         <div class="form-group">
             <label for="src"><h4><strong>source*</strong></h4></label>
-            <input type="text" [(ngModel)]="travel.src" 
-              class="form-control" 
-              id="src" 
-              name="src" 
-              placeholder="Source Country"
-              required #src="ngModel">
+            <select class ="form-control" id="src" name="src"[(ngModel)]="travel.src" required #src="ngModel">
+              <option value="">Select country</option>
+              <option value="Afganistan">Afghanistan</option>
+              <option value="Australia">Australia</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Belgium">Belgium</option>                
+              <option value="Bhutan">Bhutan</option>                
+              <option value="Brazil">Brazil</option>                
+              <option value="Cambodia">Cambodia</option>                
+              <option value="Canada">Canada</option>                
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>                
+              <option value="Colombia">Colombia</option>                
+              <option value="Cuba">Cuba</option>                
+              <option value="Egypt">Egypt</option>                
+              <option value="France">France</option>                
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>                
+              <option value="Great Britain">Great Britain</option>
+              <option value="Greece">Greece</option>                
+              <option value="Hong Kong">Hong Kong</option>               
+              <option value="Indonesia">Indonesia</option>
+              <option value="India">India</option>
+              <option value="Iran">Iran</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>                
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>                
+              <option value="Japan">Japan</option>                
+              <option value="Mongolia">Mongolia</option>                
+              <option value="Myanmar">Myanmar</option>                
+              <option value="Nepal">Nepal</option>                
+              <option value="Netherlands">Netherlands (Holland, Europe)</option>                
+              <option value="Pakistan">Pakistan</option>                
+              <option value="Portugal">Portugal</option>                
+              <option value="Qatar">Qatar</option>                
+              <option value="Russia">Russia</option>                
+              <option value="Saudi Arabia">Saudi Arabia</option>                
+              <option value="South Africa">South Africa</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>                
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syria">Syria</option>                
+              <option value="Thailand">Thailand</option>                
+              <option value="Turkey">Turkey</option>                
+              <option value="United Kingdom">United Kingdom</option>                
+              <option value="United Arab Erimates">United Arab Emirates</option>
+              <option value="United States of America">United States of America</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+           </select>
         </div>
           <div [hidden]="src.dirty||!src.touched" class="alert alert-danger">Source is required</div>
         <div class="form-group">
             <label for="des"><h4><strong>Destination</strong></h4></label>
-            <input type="text" [(ngModel)]="travel.des" 
-              class="form-control" 
-              id="des" 
-              name="des" 
-              placeholder="Destination Country"
-               #des="ngModel">
+            <select class ="form-control" id="des" name="des"[(ngModel)]="travel.des" #des="ngModel">
+              <option value="">Select country</option>
+              <option value="Afganistan">Afghanistan</option>
+              <option value="Australia">Australia</option>
+              <option value="Bahrain">Bahrain</option>
+              <option value="Bangladesh">Bangladesh</option>
+              <option value="Belgium">Belgium</option>                
+              <option value="Bhutan">Bhutan</option>                
+              <option value="Brazil">Brazil</option>                
+              <option value="Cambodia">Cambodia</option>                
+              <option value="Canada">Canada</option>                
+              <option value="Chile">Chile</option>
+              <option value="China">China</option>                
+              <option value="Colombia">Colombia</option>                
+              <option value="Cuba">Cuba</option>                
+              <option value="Egypt">Egypt</option>                
+              <option value="France">France</option>                
+              <option value="Germany">Germany</option>
+              <option value="Ghana">Ghana</option>                
+              <option value="Great Britain">Great Britain</option>
+              <option value="Greece">Greece</option>                
+              <option value="Hong Kong">Hong Kong</option>               
+              <option value="Indonesia">Indonesia</option>
+              <option value="India">India</option>
+              <option value="Iran">Iran</option>
+              <option value="Iraq">Iraq</option>
+              <option value="Ireland">Ireland</option>                
+              <option value="Israel">Israel</option>
+              <option value="Italy">Italy</option>                
+              <option value="Japan">Japan</option>                
+              <option value="Mongolia">Mongolia</option>                
+              <option value="Myanmar">Myanmar</option>                
+              <option value="Nepal">Nepal</option>                
+              <option value="Netherlands">Netherlands (Holland, Europe)</option>                
+              <option value="Pakistan">Pakistan</option>                
+              <option value="Portugal">Portugal</option>                
+              <option value="Qatar">Qatar</option>                
+              <option value="Russia">Russia</option>                
+              <option value="Saudi Arabia">Saudi Arabia</option>                
+              <option value="South Africa">South Africa</option>
+              <option value="Spain">Spain</option>
+              <option value="Sri Lanka">Sri Lanka</option>                
+              <option value="Sweden">Sweden</option>
+              <option value="Switzerland">Switzerland</option>
+              <option value="Syria">Syria</option>                
+              <option value="Thailand">Thailand</option>                
+              <option value="Turkey">Turkey</option>                
+              <option value="United Kingdom">United Kingdom</option>                
+              <option value="United Arab Erimates">United Arab Emirates</option>
+              <option value="United States of America">United States of America</option>
+              <option value="Vietnam">Vietnam</option>
+              <option value="Zimbabwe">Zimbabwe</option>
+           </select>
         </div>
         <div class="form-group">
             <label for="st"><h4><strong>Start Date*</strong></h4></label>
