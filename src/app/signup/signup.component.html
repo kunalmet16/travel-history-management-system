@@ -1,10 +1,15 @@
 
 
-<div [hidden]="!hasError">
+<div class="bg-secondary" [hidden]="!hasError">
   <h2>UserName Already Exist!!</h2>
 </div>
+
+<div class="bg-secondary" [hidden]="!error">
+  <h2>{{error.message}}</h2>
+</div>
+
 <div class="text-center">
-  <li class="list-inline-item" [hidden]="!hasError">
+  <li class="list-inline-item" [hidden]="!hasError || !error">
     <a routerLink="/" class="btn btn-danger btn-lg">Back</a>
     </li>
 </div>
@@ -14,12 +19,12 @@
 
   </div>
   <div class="col-4">
-<div class="card my-5 "[hidden]="hasError">
-  <div class="card-header">
+<div class="card my-5 ">
+  <div class="card-header bg-secondary text-white">
     <h2><strong>Register</strong></h2>
   </div>
     <div class="card-body">
-      <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <form (ngSubmit)="onSubmit(userForm)" #userForm="ngForm">
         <div class="form-group text-center">
           <label for="name"><h4><strong>Name</strong></h4></label>
           <input type="text" [(ngModel)]="user.name" 
@@ -38,8 +43,12 @@
             name="pass" 
             placeholder="Password"
             required #pass="ngModel">
+            
           <div [hidden]="!pass.touched||pass.dirty" class="alert alert-danger">Password is required</div>
         </div>
+        
+           
+             
         <div class="text-center">
           <li class="list-inline-item">
             <button type="submit" [disabled]="!userForm.form.valid" 

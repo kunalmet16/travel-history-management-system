@@ -14,7 +14,7 @@ export class TravelService {
   
  
   
-  user:String='';
+//  user:String='';
   constructor(private http: HttpClient,private _userServcie:UserService,private router: Router) {
     //this.user=_userServcie.username; 
    // this.travelsUrl = `http://localhost:8080/users/${sessionStorage.getItem('username')}/travels`;

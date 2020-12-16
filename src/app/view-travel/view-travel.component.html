@@ -5,8 +5,8 @@
     <a routerLink="/home" class="btn btn-secondary btn-lg">Back</a>
     </li> 
   </div>
-  <div class="text-center bg-dark text-white ">
-    <h2>{{travel[0].name}}'s Travel History</h2>
+  <div class="alert text-center bg-dark text-white ">
+    <h2> Travel History Table</h2>
   </div>
 </div>
 <div class="container">
@@ -14,6 +14,7 @@
     <thead>
       <tr>
         <th>TravelId</th>
+        <th>Traveller Name</th>
         <th>Source</th>
         <th>Destination</th>
         <th>StartDate</th>
@@ -24,6 +25,7 @@
     <tbody *ngFor="let t of travel">
       <tr >
         <td><h3>{{t.id}}</h3></td>
+        <td><h3>{{t.name}}</h3></td>
         <td><h3>{{t.src}}</h3></td>
         <td><h3>{{t.des}}</h3></td>
         <td><h3 *ngIf="t.st!=null">{{t.st.valueOf()|date}}</h3></td>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { UserService } from '../services/user.service';
 import { User } from '../shared/user';
 @Component({
@@ -13,7 +14,6 @@ export class LoginComponent implements OnInit {
   
 
   user: User;
-  error: Error = new Error();
   hasError:boolean=false;
   constructor(private route: ActivatedRoute, 
     private router: Router, 
@@ -24,17 +24,18 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit() {
-    this.userService.login(this.user).subscribe(_result => 
-      this.gotoHome(),error => {console.log(error);
-      this.error=error;
-    this.hasError=true;
-    
-  });
-    
+    this.userService.login(this.user).subscribe(_result => {
+      if(_result==true)
+      {
+        this.gotoHome();
+      }
+      else{
+        this.hasError=true;
+      }
+    });
   }
 
   gotoHome() {
-    this.router.navigate(['/home']);
+  this.router.navigate(['/home']);
   }
-
 }
