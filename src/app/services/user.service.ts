@@ -21,12 +21,12 @@ export class UserService {
   public login(user: User) {
         //localStorage.setItem('username',user.name.valueOf());
             this.username=user.name;
-    return this.http.post<User>(this.usersUrl+'login', user);
+    return this.http.post<any>(this.usersUrl+'login', user);
   }
   public signup(user: User) {
     //localStorage.setItem('username',user.name.valueOf());
     this.username=user.name;
-    return this.http.post<User>(this.usersUrl+'signup', user);
+    return this.http.post<any>(this.usersUrl+'signup', user);
   }
 
   public logout()

@@ -5,6 +5,7 @@
         </li>
         
     </ul>
+
     <form class="form-inline"(ngSubmit)="onSubmit()" #countryForm="ngForm">
             <select class ="form-control mr-sm-2" id="src" name="name"[(ngModel)]="country.name" required #name="ngModel">
                 <option value="">Search By Destination</option>
@@ -61,6 +62,9 @@
              </select>
         <button type="submit" class="btn btn-info btn-sm">Search</button>
       </form>
+      <li class="list-inline-item text-white">
+                <h4>Hello, {{this._userService.username}}</h4>
+      </li>
     <li class="list-inline-item">
         <button (click)="_userService.logout()"class="btn btn-dark">Logout</button>
     </li>
