@@ -23,6 +23,7 @@ export class UpdateComponent implements OnInit {
   }
   onSubmit(updateForm:any) {
     const id=+this.route.snapshot.params['id'];
+    
     this.travelService.updateTravel(this.travel,id).subscribe(_result => {
       this.submission=true;
       this.updateForm=updateForm;

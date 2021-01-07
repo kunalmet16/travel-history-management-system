@@ -24,6 +24,7 @@ export class AddTravelComponent implements OnInit {
   }
   onSubmit(travelForm:any) {
     this.travelService.save(this.travel).subscribe(_result => {
+      console.log(_result);
       this.submission=true;
       this.travelForm=travelForm;
     },error => console.log(error));

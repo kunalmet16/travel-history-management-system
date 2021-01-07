@@ -27,7 +27,7 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSubmit(userForm:any) {
+  onSubmit() {
     
     this.userService.signup(this.user).subscribe(_result => {
       if(_result==true)      

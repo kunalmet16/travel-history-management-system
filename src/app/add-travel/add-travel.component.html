@@ -1,16 +1,15 @@
+
+<app-navbar></app-navbar>
 <div [hidden]="!submission" class="text-center">
   <h1>Journey Added Succesfully!!</h1>
   
   <li class="list-inline-item">
     <button (click)="addJourneyform()"class="btn btn-primary">Add More Journey</button>
   </li>
-    <li class="list-inline-item">
-    <a routerLink="/home" class="btn btn-info">Home</a>
-    </li>
+    
 </div>
-<div class="row">
-  <div class="col-3"></div>
-  <div class="col-6">
+<div class="row justify-content-center">
+  <div class="col-md-6 ">
 <div class="card my-5"[hidden]="submission">
   <div class="card-header bg-secondary text-white">
     <h2><strong>Travel Form</strong></h2>

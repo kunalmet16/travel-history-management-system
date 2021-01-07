@@ -4,4 +4,6 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 
 
-
+.card{
+    min-height: 500px;
+}

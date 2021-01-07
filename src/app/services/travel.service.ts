@@ -26,11 +26,11 @@ export class TravelService {
   }
 
   public save(travel: Travel) {
-    return this.http.post<Travel>(`http://localhost:8080/users/${this._userServcie.username}/travels`, travel);
+    return this.http.post<any>(`http://localhost:9090/users/${this._userServcie.username}/travels`, travel);
   }
   public updateTravel(travel:Travel,id:Number)
   {
-      return this.http.put<Travel>(`http://localhost:8080/users/${this._userServcie.username}/travels`+`/${id}`,travel);
+      return this.http.put<any>(`http://localhost:8080/users/${this._userServcie.username}/travels`+`/${id}`,travel);
   }
   public getCountry(countryname:String)
   {

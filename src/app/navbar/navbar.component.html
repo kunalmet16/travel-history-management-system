@@ -1,12 +1,16 @@
-<nav class="navbar navbar-expand navbar-light bg-secondary ">
-    <ul class="nav navbar-nav" >
-        <li class="nav-item"*ngFor="let link of links">
-           <a class="nav-link" [routerLink]="link.path"><h3><strong>{{link.title}}</strong></h3></a>
-        </li>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         
-    </ul>
-
-    <form class="form-inline"(ngSubmit)="onSubmit()" #countryForm="ngForm">
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class=" navbar-nav mr-auto">
+                <li class="nav-item "*ngFor="let link of links">
+                    <a class="nav-link" [routerLink]="link.path"><h4 class="text-white">{{link.title}}</h4></a>
+                </li>
+            </ul>
+        <form class="form-inline"(ngSubmit)="onSubmit()" #countryForm="ngForm">
             <select class ="form-control mr-sm-2" id="src" name="name"[(ngModel)]="country.name" required #name="ngModel">
                 <option value="">Search By Destination</option>
                 <option value="Afganistan">Afghanistan</option>
@@ -60,12 +64,22 @@
                 <option value="Vietnam">Vietnam</option>
                 <option value="Zimbabwe">Zimbabwe</option>
              </select>
-        <button type="submit" class="btn btn-info btn-sm">Search</button>
-      </form>
-      <li class="list-inline-item text-white">
+            <button type="submit" class="btn btn-dark btn-sm"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+       
+         <li class="list-inline-item text-white">
                 <h4>Hello, {{this._userService.username}}</h4>
-      </li>
-    <li class="list-inline-item">
+        </li>
+    </div>
+</div>
+        <li class="list-inline-item">
         <button (click)="_userService.logout()"class="btn btn-dark">Logout</button>
-    </li>
+        </li>
+    
+
+     
+        
+        
+    
+
 </nav>

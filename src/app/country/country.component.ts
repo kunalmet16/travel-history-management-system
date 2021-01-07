@@ -13,6 +13,7 @@ export class CountryComponent implements OnInit {
 
   country:Country[]=[];
   error:Error=new Error();
+   cname!: String;
   constructor(private route: ActivatedRoute, 
     private router: Router,private travelService: TravelService,
     ) {
@@ -20,17 +21,19 @@ export class CountryComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    const cname=this.route.snapshot.params['cname'];
-    this.travelService.getCountry(cname).subscribe(
+     this.cname=this.route.snapshot.params['cname'];
+    this.travelService.getCountry(this.cname).subscribe(
       (response)=>{
         this.country=response;
+        
       },
       (error)=>{
         console.log(error);
       }
-   );
-    
+   );    
   }
+  
 
 
 }
+

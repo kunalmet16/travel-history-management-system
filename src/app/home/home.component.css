@@ -1,3 +1,25 @@
 div{
     min-height: 10px;
 }
+.carousel {
+    background:#512DA8;
+}
+
+.carousel-item {
+  height: 250px;
+  
+  
+}
+
+.carousel-item img {
+    
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+}
+
+.container{
+    padding-top: 10px;
+    min-width: 80%;
+}

@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeadComponent implements OnInit {
 
+  title = 'Travel-History-Management-System';
   constructor() { }
 
   ngOnInit(): void {

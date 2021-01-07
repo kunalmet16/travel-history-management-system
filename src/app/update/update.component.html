@@ -1,14 +1,12 @@
+<app-navbar></app-navbar>
+
 <div [hidden]="!submission" class="text-center">
   <h1>Journey Updated Succesfully!!</h1>
   
-      <li class="list-inline-item">
-    <a routerLink="/home" class="btn btn-info">Home</a>
-    </li>
 </div>
-  <div class="row">
-    <div class="col-3"></div>
-
-  <div class="col-6">
+  <div class="row justify-content-center">
+  
+  <div class="col-md-6">
   
   <div class="card my-5"[hidden]="submission">
     <div class="card-header bg-secondary">
@@ -86,6 +84,7 @@
                 required #en="ngModel">
           </div>
           <div [hidden]="en.dirty||!en.touched" class="alert alert-danger">EndDate is required</div>  
+          <div style="padding-top:50px">
           <li class="list-inline-item">
           <button type="submit" [disabled]="!updateForm.form.valid" 
             class="btn btn-success">Submit</button>
@@ -93,6 +92,7 @@
             <li class="list-inline-item">
               <a routerLink="/home" class="btn btn-danger">Cancel</a>
             </li>
+          </div>
         </form>
       </div>
     </div>
